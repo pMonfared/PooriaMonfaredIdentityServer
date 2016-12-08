@@ -1,0 +1,8 @@
+﻿dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ migrations add InitialIdentityServerMigration -c ApplicationDbContext
+dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database update -c ApplicationDbContext
+
+dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database update -c ApplicationDbContext
+dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database update -c ApplicationDbContext
+
+dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ migrations add InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Migrations/IdentityServer/PersistedGrantDb
+dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ migrations add InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Migrations/IdentityServer/ConfigurationDb

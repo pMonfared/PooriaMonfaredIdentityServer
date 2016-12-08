@@ -1,0 +1,146 @@
+{
+  "dependencies": {
+    "Microsoft.AspNetCore.Diagnostics": "1.1.0",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+    "Microsoft.Extensions.Logging.Console": "1.1.0",
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.1.0-preview4-final",
+    "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Design": {
+      "version": "1.1.0-preview4-final",
+      "type": "build"
+    },
+    "Microsoft.AspNetCore.StaticFiles": "1.1.0",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+      "version": "1.1.0-preview4-final",
+      "type": "build"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "version": "1.1.0-preview4-final",
+      "type": "build"
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.0",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.1.0",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
+    "Microsoft.AspNetCore.Mvc": "1.1.0",
+
+    "Microsoft.AspNetCore.SpaServices": "1.0.0-beta-000019",
+    "Microsoft.AspNetCore.Diagnostics.Elm": "0.2.0",
+    "Microsoft.AspNetCore.ResponseCompression": "1.0.0",
+    "Microsoft.AspNetCore.Mvc.Localization": "1.1.0",
+    "Microsoft.AspNetCore.Session": "1.1.0",
+    "Microsoft.AspNetCore.Hosting": "1.1.0",
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions": "1.1.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.FileProviders.Embedded": "1.1.0",
+    "Microsoft.Extensions.Logging.Debug": "1.1.0",
+    "Microsoft.Net.Http.Headers": "1.1.0",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0",
+
+
+    "CacheManager.Core": "0.9.1",
+    "CacheManager.Microsoft.Extensions.Caching.Memory": "0.9.1",
+    "CacheManager.Serialization.Json": "0.9.1",
+    "EFSecondLevelCache.Core": "1.0.1",
+
+
+    "IdentityServer4.AspNetIdentity": "1.0.0-rc4-update1",
+
+
+    "System.Globalization": "4.3.0",
+    "System.IO": "4.3.0",
+    "System.Linq": "4.3.0",
+    "System.Reflection": "4.3.0",
+    "System.Runtime": "4.3.0",
+    "System.Runtime.Extensions": "4.3.0",
+    "System.Runtime.WindowsRuntime": "4.3.0",
+    "System.Text.RegularExpressions": "4.3.0",
+    "System.Threading.Tasks": "4.3.0",
+
+
+    "StructureMap.Microsoft.DependencyInjection": "1.2.0",
+
+
+    "IdentityServer4": "1.0.0-rc4-update1",
+    "IdentityServer4.EntityFramework": "1.0.0-rc4-update1",
+
+
+    "PooriaMonfaredIdentityServer.DataLayer": "1.0.0-*"
+  },
+
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+      "version": "1.1.0-preview4-final",
+      "imports": [
+        "portable-net45+win8"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Tools": {
+      "version": "1.1.0-preview4-final"
+    },
+    "Microsoft.Extensions.SecretManager.Tools": "1.1.0-preview4-final",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "version": "1.1.0-preview4-final",
+      "imports": [
+        "portable-net45+win8"
+      ]
+    },
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"
+  },
+
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        }
+      },
+      "imports": [
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
+  },
+
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "preserveCompilationContext": true
+    //"embed": "Views/**/*.cshtml,Areas/**/Views/**/*.cshtml",
+    //"define": [ "DEBUG" ]
+  },
+  "runtimeOptions": {
+    "configProperties": {
+      "System.GC.Server": true
+    }
+  },
+  "publishOptions": {
+    "include": [
+      "wwwroot",
+      //"Views",
+      //"Areas/**/Views",
+      "appsettings.json",
+      "web.config"
+    ]
+  },
+  "configurations": {
+    "Release": {
+      "buildOptions": {
+        "optimize": true,
+        "platform": "anycpu"
+      }
+    }
+  },
+  "scripts": {
+    "precompile": [
+      //"dotnet bundle"
+    ],
+    "prepublish": [
+      //"bower install"
+    ],
+    "postpublish": [
+      "dotnet razor-precompile --configuration %publish:Configuration% --framework %publish:TargetFramework% --output-path %publish:OutputPath% %publish:ProjectPath%",
+      "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+    ]
+  }
+}
