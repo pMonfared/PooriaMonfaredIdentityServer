@@ -15,7 +15,7 @@ namespace PooriaMonfaredIdentityServer.DataLayer.Configuration
                 {
                     Subject = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "pooria",
-                    Password = "password",
+                    Password = "newPass@1234",
                     Claims = new List<Claim>
                     {
                         new Claim(JwtClaimTypes.Email, "p@m.com"),

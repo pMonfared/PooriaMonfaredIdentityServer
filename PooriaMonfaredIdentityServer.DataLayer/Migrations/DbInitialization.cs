@@ -56,7 +56,7 @@ namespace PooriaMonfaredIdentityServer.DataLayer.Migrations
                     }
                     context.SaveChanges();
                 }
-
+                //Add user
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
                 if (!userManager.Users.Any())
                 {
@@ -77,7 +77,7 @@ namespace PooriaMonfaredIdentityServer.DataLayer.Migrations
                             });
                         }
 
-                        userManager.CreateAsync(identityUser, "Password1234").Wait();
+                        userManager.CreateAsync(identityUser, "newPass@1234").Wait();
                     }
                 }
             }
