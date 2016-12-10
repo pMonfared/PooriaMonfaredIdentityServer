@@ -1,8 +1,8 @@
-# PooriaMonfaredIdentityServer
+# PooriaMonfaredIdentityServer (Beta) in progress...
 
-##Custom Identity Server 4 + asp.net Core App
+##Customize Identity Server 4 + asp.net Core App
 
-###for Create Database:
+###Create database:
 
 #####setup your custom connectionString in appsetting.json in PooriaMonfaredIdentityServer.Web
 #####run CMD from location of PooriaMonfaredIdentityServer.DataLayer
