@@ -34,8 +34,8 @@ namespace PooriaMonfaredIdentityServer.DataLayer.Configuration
                         "role",
                         "customAPI"
                     },
-                    RedirectUris = new List<string> {"https://localhost:44330/signin-oidc"},
-                    PostLogoutRedirectUris = new List<string> { "https://localhost:44330" }
+                    RedirectUris = new List<string> {"https://localhost:44310/signin-oidc"},
+                    PostLogoutRedirectUris = new List<string> { "https://localhost:44310" }
                 }
             };
         }

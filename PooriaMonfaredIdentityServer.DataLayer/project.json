@@ -6,8 +6,8 @@
     "System.Linq": "4.3.0",
     "System.Reflection": "4.3.0",
 
-    "IdentityServer4": "1.0.0-rc4-update1",
-    "IdentityServer4.EntityFramework": "1.0.0-rc4-update1",
+    "IdentityServer4": "1.0.0-rc5",
+    "IdentityServer4.EntityFramework": "1.0.0-rc5",
 
     "CacheManager.Serialization.Json": "0.9.1",
     "EFSecondLevelCache.Core": "1.0.1",

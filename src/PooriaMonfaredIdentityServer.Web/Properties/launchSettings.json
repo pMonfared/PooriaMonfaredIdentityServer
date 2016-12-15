@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61441/",
-      "sslPort": 0
+      "applicationUrl": "https://localhost:44325/",
+      "sslPort": 44325
     }
   },
   "profiles": {
@@ -17,6 +17,7 @@
     },
     "PooriaMonfaredIdentityServer.Web": {
       "commandName": "Project",
+      "launchBrowser": true,
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

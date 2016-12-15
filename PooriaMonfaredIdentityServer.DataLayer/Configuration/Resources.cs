@@ -12,7 +12,11 @@ namespace PooriaMonfaredIdentityServer.DataLayer.Configuration
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
                 new IdentityResources.Email(),
-                new IdentityResource("role", new List<string> {"role"})
+                new IdentityResource
+                {
+                    Name = "role",
+                    UserClaims = new List<string> {"role"}
+                }
             };
         }
 

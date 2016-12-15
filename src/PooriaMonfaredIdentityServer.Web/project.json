@@ -22,7 +22,6 @@
     "Microsoft.EntityFrameworkCore.InMemory": "1.1.0",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
     "Microsoft.AspNetCore.Mvc": "1.1.0",
-
     "Microsoft.AspNetCore.SpaServices": "1.0.0-beta-000019",
     "Microsoft.AspNetCore.Diagnostics.Elm": "0.2.0",
     "Microsoft.AspNetCore.ResponseCompression": "1.0.0",
@@ -36,17 +35,11 @@
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
     "Microsoft.Net.Http.Headers": "1.1.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0",
-
-
     "CacheManager.Core": "0.9.1",
     "CacheManager.Microsoft.Extensions.Caching.Memory": "0.9.1",
     "CacheManager.Serialization.Json": "0.9.1",
     "EFSecondLevelCache.Core": "1.0.1",
-
-
-    "IdentityServer4.AspNetIdentity": "1.0.0-rc4-update1",
-
-
+    "IdentityServer4.AspNetIdentity": "1.0.0-rc5",
     "System.Globalization": "4.3.0",
     "System.IO": "4.3.0",
     "System.Linq": "4.3.0",
@@ -56,16 +49,12 @@
     "System.Runtime.WindowsRuntime": "4.3.0",
     "System.Text.RegularExpressions": "4.3.0",
     "System.Threading.Tasks": "4.3.0",
-
-
     "StructureMap.Microsoft.DependencyInjection": "1.2.0",
-
-
-    "IdentityServer4": "1.0.0-rc4-update1",
-    "IdentityServer4.EntityFramework": "1.0.0-rc4-update1",
-
-
-    "PooriaMonfaredIdentityServer.DataLayer": "1.0.0-*"
+    "IdentityServer4": "1.0.0-rc5",
+    "IdentityServer4.EntityFramework": "1.0.0-rc5",
+    "PooriaMonfaredIdentityServer.DataLayer": "1.0.0-*",
+    "PooriaMonfaredIdentityServer.PresentationLayer": "1.0.0-*",
+    "PooriaMonfaredIdentityServer.DomLayer.UsersMg": "1.0.0-*"
   },
 
   "tools": {

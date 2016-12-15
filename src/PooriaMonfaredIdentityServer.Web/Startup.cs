@@ -59,24 +59,7 @@ namespace PooriaMonfaredIdentityServer.Web
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString,
                 b => b.MigrationsAssembly(migrationsAssembly)), ServiceLifetime.Scoped);
-
-
-            // Use a SQLite database
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlite(
-            //        "Filename=./pmServerIdentity.db",
-            //        b => b.MigrationsAssembly(migrationsAssembly)
-            //    ), ServiceLifetime.Scoped
-            //);
-
-
-            // Use a PostgreSQL database
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseNpgsql(
-            //        connectionString,
-            //        b => b.MigrationsAssembly(migrationsAssembly)
-            //    )
-            //);
+            
 
             // ASP.NET Identity Registrations
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
@@ -107,34 +90,11 @@ namespace PooriaMonfaredIdentityServer.Web
 
             scopeFactory.Initialize();
 
-            app.UseEFSecondLevelCache();
-
             app.UseIdentity();
             app.UseIdentityServer();
 
             app.UseStaticFiles();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                 name: "default",
-                 template: "{controller=Home}/{action=Index}/{id?}");
-
-                routes.MapRoute(
-                    name: "login",
-                    template: "login",
-                    defaults: new { controller = "Account", action = "Login" });
-                routes.MapRoute(
-                    name: "register",
-                    template: "register",
-                    defaults: new { controller = "Account", action = "register" });
-
-                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
-            });
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
