@@ -17,3 +17,13 @@ dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database up
 dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database update -c PersistedGrantDbContext
 dotnet ef --startup-project ../src/PooriaMonfaredIdentityServer.Web/ database update -c ConfigurationDbContext
 ```
+
+
+##Exmaple OpenIdConnect as a web app dotnetcore from here:
+https://github.com/pMonfared/PooriaMonfaredIdentityClientSample
+
+####Demo user info:
+username: pooria
+password: newPass@1234
+
+#####have fun
